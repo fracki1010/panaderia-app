@@ -1,14 +1,14 @@
 import { Slot } from 'expo-router';
 import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { PaperProvider } from 'react-native-paper';
+import { MD3DarkTheme, PaperProvider } from 'react-native-paper';
 
 const RootLayout = () => {
 
 
   return (
 
-    <PaperProvider>
+    <PaperProvider theme={MD3DarkTheme} >
 
       <GestureHandlerRootView style={{ flex: 1 }}>
         <Slot />

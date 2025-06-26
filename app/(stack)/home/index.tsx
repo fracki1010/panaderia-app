@@ -1,16 +1,18 @@
 import { useNavigation, useRouter } from 'expo-router';
-import { View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { Button, Surface, Text, useTheme } from 'react-native-paper';
 
 const HomeScreen = () => {
 
     const router = useRouter();
     const navigation = useNavigation()
+    const theme = useTheme();
 
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: theme.colors.background }}>
+        <Surface style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Button
-
+                // buttonColor={theme.colors.primary}
+                // textColor={theme.colors.onPrimary}
                 mode="contained-tonal"
                 onPress={() => {
                     router.push('/materia-prima');
@@ -20,7 +22,8 @@ const HomeScreen = () => {
                 <Text style={{ color: 'white' }}>Materia Prima</Text>
             </Button>
             <Button
-
+                // buttonColor={theme.colors.primary}
+                // textColor={theme.colors.onPrimary}
                 mode="contained-tonal"
                 onPress={() => {
                     router.push('/pedidos');
@@ -30,7 +33,8 @@ const HomeScreen = () => {
                 <Text style={{ color: 'white' }}>Pedidos</Text>
             </Button>
             <Button
-
+                // buttonColor={theme.colors.primary}
+                // textColor={theme.colors.onPrimary}
                 mode="contained-tonal"
                 onPress={() => {
                     router.push('/calendario');
@@ -39,7 +43,8 @@ const HomeScreen = () => {
             >
                 <Text style={{ color: 'white' }}>Calendario</Text>
             </Button>
-        </View>
+        </Surface>
+        // </View>
     );
 };
 
